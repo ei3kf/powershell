@@ -1,0 +1,30 @@
+PowerShell 6.1.1
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+https://aka.ms/pscore6-docs
+Type 'help' to get help.
+
+PS C:\WINDOWS\system32> install-module awslambdapscore
+PS C:\WINDOWS\system32> Get-Command -Module AWSLambdaPSCore
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Function        Get-AWSPowerShellLambdaTemplate                    1.1.0.0    AWSLambdaPSCore
+Function        New-AWSPowerShellLambda                            1.1.0.0    AWSLambdaPSCore
+Function        New-AWSPowerShellLambdaPackage                     1.1.0.0    AWSLambdaPSCore
+Function        Publish-AWSPowerShellLambda                        1.1.0.0    AWSLambdaPSCore
+
+
+PS C:\WINDOWS\system32> Get-AWSPowerShellLambdaTemplate
+
+Template                     Description
+--------                     -----------
+Basic                        Bare bones script
+CloudFormationCustomResource PowerShell handler base for use with CloudFormation custom resource events
+CodeCommitTrigger            Script to process AWS CodeCommit Triggers
+DetectLabels                 Use Amazon Rekognition service to tag image files in S3 with detected labels.
+KinesisStreamProcessor       Script to be process a Kinesis Stream
+S3Event                      Script to process S3 events
+SNSSubscription              Script to be subscribed to an SNS Topic
+SQSQueueProcessor            Script to be subscribed to an SQS Queue
+
