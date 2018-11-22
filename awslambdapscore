@@ -28,3 +28,305 @@ S3Event                      Script to process S3 events
 SNSSubscription              Script to be subscribed to an SNS Topic
 SQSQueueProcessor            Script to be subscribed to an SQS Queue
 
+PS C:\WINDOWS\system32> cd
+PS C:\Users\AClements> cd .\Documents\ServerBuild\
+PS C:\Users\AClements\Documents\ServerBuild> New-AWSPowerShellLambda -Template Basic -ScriptName HelloWorld
+Configuring script to use installed version 3.3.390.0 of AWSPowerShell.NetCore.
+Created new AWS Lambda PowerShell script HelloWorld.ps1 from template Basic at C:\Users\AClements\Documents\ServerBuild\HelloWorld
+
+PS C:\Users\AClements\Documents\ServerBuild\HelloWorld> Publish-AWSPowerShellLambda -Name HelloWorld -ScriptPath .\HelloWorld.ps1 -Region eu-west-1
+Staging deployment at C:\Users\AClements\AppData\Local\Temp\HelloWorld
+Configuring PowerShell to version 6.1.0
+Generating C# project C:\Users\AClements\AppData\Local\Temp\HelloWorld\HelloWorld.csproj used to create Lambda function bundle.
+Generating C:\Users\AClements\AppData\Local\Temp\HelloWorld\Bootstrap.cs to load PowerShell script and required modules in Lambda environment.
+Generating aws-lambda-tools-defaults.json config file with default values used when publishing project.
+Copying PowerShell script to staging directory
+Deploying to AWS Lambda
+Restoring .NET Lambda deployment tool
+Initiate deployment
+Amazon Lambda Tools for .NET Core applications (3.1.1)
+Project Home: https://github.com/aws/aws-extensions-for-dotnet-cli, https://github.com/aws/aws-lambda-dotnet
+
+Executing publish command
+... invoking 'dotnet publish', working folder 'C:\Users\AClements\AppData\Local\Temp\HelloWorld\bin\Release\netcoreapp2.1\publish'
+... Disabling compilation context to reduce package size. If compilation context is needed pass in the "/p:PreserveCompilationContext=false" switch.
+... publish: Microsoft (R) Build Engine version 15.9.20+g88f5fadfbe for .NET Core
+... publish: Copyright (C) Microsoft Corporation. All rights reserved.
+... publish:   Restoring packages for C:\Users\AClements\AppData\Local\Temp\HelloWorld\HelloWorld.csproj...
+... publish:   Installing Microsoft.CodeAnalysis.Analyzers 2.6.1.
+... publish:   Installing System.Net.WebHeaderCollection 4.3.0.
+... publish:   Installing System.Security.SecureString 4.3.0.
+... publish:   Installing System.Runtime.CompilerServices.VisualC 4.3.0.
+... publish:   Installing Microsoft.CodeAnalysis.Common 2.9.0.
+... publish:   Installing Markdig.Signed 0.15.2.
+... publish:   Installing System.Net.Requests 4.3.0.
+... publish:   Installing Microsoft.Management.Infrastructure 1.0.0.
+... publish:   Installing Microsoft.PowerShell.Native 6.1.0-rc.1.
+... publish:   Installing Amazon.Lambda.PowerShellHost 1.0.0.
+... publish:   Installing Amazon.Lambda.Core 1.0.0.
+... publish:   Installing Microsoft.PowerShell.SDK 6.1.0.
+... publish:   Installing Microsoft.PowerShell.CoreCLR.Eventing 6.1.0.
+... publish:   Installing Microsoft.CodeAnalysis.CSharp 2.9.0.
+... publish:   Installing Microsoft.PowerShell.MarkdownRender 6.1.0.
+... publish:   Installing NJsonSchema 9.10.72.
+... publish:   Installing Microsoft.ApplicationInsights 2.7.2.
+... publish:   Installing System.Drawing.Common 4.5.0.
+... publish:   Installing System.ServiceModel.Duplex 4.5.3.
+... publish:   Installing System.IO.FileSystem.AccessControl 4.5.0.
+... publish:   Installing System.ServiceModel.Primitives 4.5.3.
+... publish:   Installing Microsoft.PowerShell.Security 6.1.0.
+... publish:   Installing Microsoft.NETCore.Windows.ApiSets 1.0.1.
+... publish:   Installing System.ServiceModel.Http 4.5.3.
+... publish:   Installing System.ServiceModel.Security 4.5.3.
+... publish:   Installing System.Threading.AccessControl 4.5.0.
+... publish:   Installing System.IO.Packaging 4.5.0.
+... publish:   Installing System.ServiceModel.NetTcp 4.5.3.
+... publish:   Installing System.Net.Http.WinHttpHandler 4.5.0.
+... publish:   Installing Microsoft.PowerShell.Commands.Diagnostics 6.1.0.
+... publish:   Installing System.Private.ServiceModel 4.5.3.
+... publish:   Installing Microsoft.PowerShell.Commands.Management 6.1.0.
+... publish:   Installing Microsoft.WSMan.Management 6.1.0.
+... publish:   Installing Microsoft.Windows.Compatibility 2.0.1.
+... publish:   Installing Microsoft.PowerShell.ConsoleHost 6.1.0.
+... publish:   Installing Microsoft.PowerShell.Commands.Utility 6.1.0.
+... publish:   Installing System.Management.Automation 6.1.0.
+... publish:   Installing System.Reflection.DispatchProxy 4.5.0.
+... publish:   Installing System.ServiceProcess.ServiceController 4.5.0.
+... publish:   Installing Microsoft.WSMan.Runtime 6.1.0.
+... publish:   Installing System.Diagnostics.EventLog 4.5.0.
+... publish:   Installing System.DirectoryServices 4.5.0.
+... publish:   Installing System.Data.DataSetExtensions 4.5.0.
+... publish:   Installing System.Data.Odbc 4.5.0.
+... publish:   Installing System.ComponentModel.Composition 4.5.0.
+... publish:   Installing Microsoft.Win32.SystemEvents 4.5.0.
+... publish:   Installing System.Configuration.ConfigurationManager 4.5.0.
+... publish:   Installing System.IO.Ports 4.5.0.
+... publish:   Installing System.CodeDom 4.5.0.
+... publish:   Installing System.Security.Cryptography.ProtectedData 4.5.0.
+... publish:   Installing Microsoft.Win32.Registry.AccessControl 4.5.0.
+... publish:   Installing System.DirectoryServices.Protocols 4.5.0.
+... publish:   Installing System.IO.Pipes.AccessControl 4.5.0.
+... publish:   Installing System.Runtime.Caching 4.5.0.
+... publish:   Installing System.Management 4.5.0.
+... publish:   Installing System.ServiceModel.Syndication 4.5.0.
+... publish:   Installing System.Diagnostics.PerformanceCounter 4.5.0.
+... publish:   Installing System.DirectoryServices.AccountManagement 4.5.0.
+... publish:   Installing runtime.linux-x64.Microsoft.NETCore.DotNetAppHost 2.1.0.
+... publish:   Installing runtime.linux-x64.Microsoft.NETCore.DotNetHostResolver 2.1.0.
+... publish:   Installing runtime.linux-x64.Microsoft.NETCore.DotNetHostPolicy 2.1.0.
+... publish:   Installing runtime.linux-x64.Microsoft.NETCore.App 2.1.0.
+... publish:   Generating MSBuild file C:\Users\AClements\AppData\Local\Temp\HelloWorld\obj\HelloWorld.csproj.nuget.g.props.
+... publish:   Generating MSBuild file C:\Users\AClements\AppData\Local\Temp\HelloWorld\obj\HelloWorld.csproj.nuget.g.targets.
+... publish:   Restore completed in 18.55 sec for C:\Users\AClements\AppData\Local\Temp\HelloWorld\HelloWorld.csproj.
+... publish:   HelloWorld -> C:\Users\AClements\AppData\Local\Temp\HelloWorld\bin\Release\netcoreapp2.1\rhel.7.2-x64\HelloWorld.dll
+... publish:   HelloWorld -> C:\Users\AClements\AppData\Local\Temp\HelloWorld\bin\Release\netcoreapp2.1\publish\
+Zipping publish folder C:\Users\AClements\AppData\Local\Temp\HelloWorld\bin\Release\netcoreapp2.1\publish to C:\Users\AClements\AppData\Local\Temp\HelloWorld\bin\Release\netcoreapp2.1\HelloWorld.zip
+... zipping: Amazon.Lambda.Core.dll
+... zipping: Amazon.Lambda.PowerShellHost.dll
+... zipping: HelloWorld.deps.json
+... zipping: HelloWorld.dll
+... zipping: HelloWorld.pdb
+... zipping: HelloWorld.ps1
+... zipping: HelloWorld.runtimeconfig.json
+... zipping: libmi.so
+... zipping: libpsl-native.so
+... zipping: libpsrpclient.so
+... zipping: Markdig.dll
+... zipping: Microsoft.ApplicationInsights.dll
+... zipping: Microsoft.CodeAnalysis.CSharp.dll
+... zipping: Microsoft.CodeAnalysis.dll
+... zipping: Microsoft.Management.Infrastructure.dll
+... zipping: Microsoft.Management.Infrastructure.Native.dll
+... zipping: Microsoft.PowerShell.Commands.Management.dll
+... zipping: Microsoft.PowerShell.Commands.Utility.dll
+... zipping: Microsoft.PowerShell.ConsoleHost.dll
+... zipping: Microsoft.PowerShell.CoreCLR.Eventing.dll
+... zipping: Microsoft.PowerShell.MarkdownRender.dll
+... zipping: Microsoft.PowerShell.SDK.dll
+... zipping: Microsoft.PowerShell.Security.dll
+... zipping: Microsoft.Win32.Registry.AccessControl.dll
+... zipping: Microsoft.Win32.SystemEvents.dll
+... zipping: Newtonsoft.Json.dll
+... zipping: NJsonSchema.dll
+... zipping: System.CodeDom.dll
+... zipping: System.ComponentModel.Composition.dll
+... zipping: System.Configuration.ConfigurationManager.dll
+... zipping: System.Data.DataSetExtensions.dll
+... zipping: System.Data.Odbc.dll
+... zipping: System.Data.SqlClient.dll
+... zipping: System.Diagnostics.EventLog.dll
+... zipping: System.Diagnostics.PerformanceCounter.dll
+... zipping: System.DirectoryServices.AccountManagement.dll
+... zipping: System.DirectoryServices.dll
+... zipping: System.DirectoryServices.Protocols.dll
+... zipping: System.Drawing.Common.dll
+... zipping: System.IO.Packaging.dll
+... zipping: System.IO.Ports.dll
+... zipping: System.Management.Automation.dll
+... zipping: System.Management.dll
+... zipping: System.Net.Http.WinHttpHandler.dll
+... zipping: System.Private.ServiceModel.dll
+... zipping: System.Runtime.Caching.dll
+... zipping: System.Runtime.CompilerServices.Unsafe.dll
+... zipping: System.Security.Cryptography.Pkcs.dll
+... zipping: System.Security.Cryptography.ProtectedData.dll
+... zipping: System.Security.Cryptography.Xml.dll
+... zipping: System.Security.Permissions.dll
+... zipping: System.ServiceModel.dll
+... zipping: System.ServiceModel.Duplex.dll
+... zipping: System.ServiceModel.Http.dll
+... zipping: System.ServiceModel.NetTcp.dll
+... zipping: System.ServiceModel.Primitives.dll
+... zipping: System.ServiceModel.Security.dll
+... zipping: System.ServiceModel.Syndication.dll
+... zipping: System.ServiceProcess.ServiceController.dll
+... zipping: System.Text.Encoding.CodePages.dll
+... zipping: System.Text.Encodings.Web.dll
+... zipping: System.Threading.AccessControl.dll
+... zipping: cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+... zipping: cs\Microsoft.CodeAnalysis.resources.dll
+... zipping: de\Microsoft.CodeAnalysis.CSharp.resources.dll
+... zipping: de\Microsoft.CodeAnalysis.resources.dll
+... zipping: es\Microsoft.CodeAnalysis.CSharp.resources.dll
+... zipping: es\Microsoft.CodeAnalysis.resources.dll
+... zipping: fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+... zipping: fr\Microsoft.CodeAnalysis.resources.dll
+... zipping: it\Microsoft.CodeAnalysis.CSharp.resources.dll
+... zipping: it\Microsoft.CodeAnalysis.resources.dll
+... zipping: ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+... zipping: ja\Microsoft.CodeAnalysis.resources.dll
+... zipping: ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+... zipping: ko\Microsoft.CodeAnalysis.resources.dll
+... zipping: pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+... zipping: pl\Microsoft.CodeAnalysis.resources.dll
+... zipping: pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+... zipping: pt-BR\Microsoft.CodeAnalysis.resources.dll
+... zipping: ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+... zipping: ru\Microsoft.CodeAnalysis.resources.dll
+... zipping: tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+... zipping: tr\Microsoft.CodeAnalysis.resources.dll
+... zipping: zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+... zipping: zh-Hans\Microsoft.CodeAnalysis.resources.dll
+... zipping: zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+... zipping: zh-Hant\Microsoft.CodeAnalysis.resources.dll
+Creating new Lambda function HelloWorld
+Select IAM Role that to provide AWS credentials to your code:
+   19) lambda_basic_execution
+   21) *** Create new IAM Role ***
+19
+New Lambda function created
+PS C:\Users\AClements\Documents\ServerBuild\HelloWorld> Publish-AWSPowerShellLambda -Name HelloWorld -ScriptPath .\HelloWorld.ps1 -Region eu-west-1
+Staging deployment at C:\Users\AClements\AppData\Local\Temp\HelloWorld
+Configuring PowerShell to version 6.1.0
+Generating C# project C:\Users\AClements\AppData\Local\Temp\HelloWorld\HelloWorld.csproj used to create Lambda function bundle.
+Generating C:\Users\AClements\AppData\Local\Temp\HelloWorld\Bootstrap.cs to load PowerShell script and required modules in Lambda environment.
+Generating aws-lambda-tools-defaults.json config file with default values used when publishing project.
+Copying PowerShell script to staging directory
+Deploying to AWS Lambda
+Restoring .NET Lambda deployment tool
+Initiate deployment
+Amazon Lambda Tools for .NET Core applications (3.1.1)
+Project Home: https://github.com/aws/aws-extensions-for-dotnet-cli, https://github.com/aws/aws-lambda-dotnet
+
+Executing publish command
+... invoking 'dotnet publish', working folder 'C:\Users\AClements\AppData\Local\Temp\HelloWorld\bin\Release\netcoreapp2.1\publish'
+... Disabling compilation context to reduce package size. If compilation context is needed pass in the "/p:PreserveCompilationContext=false" switch.
+... publish: Microsoft (R) Build Engine version 15.9.20+g88f5fadfbe for .NET Core
+... publish: Copyright (C) Microsoft Corporation. All rights reserved.
+... publish:   Restoring packages for C:\Users\AClements\AppData\Local\Temp\HelloWorld\HelloWorld.csproj...
+... publish:   Generating MSBuild file C:\Users\AClements\AppData\Local\Temp\HelloWorld\obj\HelloWorld.csproj.nuget.g.props.
+... publish:   Generating MSBuild file C:\Users\AClements\AppData\Local\Temp\HelloWorld\obj\HelloWorld.csproj.nuget.g.targets.
+... publish:   Restore completed in 893.37 ms for C:\Users\AClements\AppData\Local\Temp\HelloWorld\HelloWorld.csproj.
+... publish:   HelloWorld -> C:\Users\AClements\AppData\Local\Temp\HelloWorld\bin\Release\netcoreapp2.1\rhel.7.2-x64\HelloWorld.dll
+... publish:   HelloWorld -> C:\Users\AClements\AppData\Local\Temp\HelloWorld\bin\Release\netcoreapp2.1\publish\
+Zipping publish folder C:\Users\AClements\AppData\Local\Temp\HelloWorld\bin\Release\netcoreapp2.1\publish to C:\Users\AClements\AppData\Local\Temp\HelloWorld\bin\Release\netcoreapp2.1\HelloWorld.zip
+... zipping: Amazon.Lambda.Core.dll
+... zipping: Amazon.Lambda.PowerShellHost.dll
+... zipping: HelloWorld.deps.json
+... zipping: HelloWorld.dll
+... zipping: HelloWorld.pdb
+... zipping: HelloWorld.ps1
+... zipping: HelloWorld.runtimeconfig.json
+... zipping: libmi.so
+... zipping: libpsl-native.so
+... zipping: libpsrpclient.so
+... zipping: Markdig.dll
+... zipping: Microsoft.ApplicationInsights.dll
+... zipping: Microsoft.CodeAnalysis.CSharp.dll
+... zipping: Microsoft.CodeAnalysis.dll
+... zipping: Microsoft.Management.Infrastructure.dll
+... zipping: Microsoft.Management.Infrastructure.Native.dll
+... zipping: Microsoft.PowerShell.Commands.Management.dll
+... zipping: Microsoft.PowerShell.Commands.Utility.dll
+... zipping: Microsoft.PowerShell.ConsoleHost.dll
+... zipping: Microsoft.PowerShell.CoreCLR.Eventing.dll
+... zipping: Microsoft.PowerShell.MarkdownRender.dll
+... zipping: Microsoft.PowerShell.SDK.dll
+... zipping: Microsoft.PowerShell.Security.dll
+... zipping: Microsoft.Win32.Registry.AccessControl.dll
+... zipping: Microsoft.Win32.SystemEvents.dll
+... zipping: Newtonsoft.Json.dll
+... zipping: NJsonSchema.dll
+... zipping: System.CodeDom.dll
+... zipping: System.ComponentModel.Composition.dll
+... zipping: System.Configuration.ConfigurationManager.dll
+... zipping: System.Data.DataSetExtensions.dll
+... zipping: System.Data.Odbc.dll
+... zipping: System.Data.SqlClient.dll
+... zipping: System.Diagnostics.EventLog.dll
+... zipping: System.Diagnostics.PerformanceCounter.dll
+... zipping: System.DirectoryServices.AccountManagement.dll
+... zipping: System.DirectoryServices.dll
+... zipping: System.DirectoryServices.Protocols.dll
+... zipping: System.Drawing.Common.dll
+... zipping: System.IO.Packaging.dll
+... zipping: System.IO.Ports.dll
+... zipping: System.Management.Automation.dll
+... zipping: System.Management.dll
+... zipping: System.Net.Http.WinHttpHandler.dll
+... zipping: System.Private.ServiceModel.dll
+... zipping: System.Runtime.Caching.dll
+... zipping: System.Runtime.CompilerServices.Unsafe.dll
+... zipping: System.Security.Cryptography.Pkcs.dll
+... zipping: System.Security.Cryptography.ProtectedData.dll
+... zipping: System.Security.Cryptography.Xml.dll
+... zipping: System.Security.Permissions.dll
+... zipping: System.ServiceModel.dll
+... zipping: System.ServiceModel.Duplex.dll
+... zipping: System.ServiceModel.Http.dll
+... zipping: System.ServiceModel.NetTcp.dll
+... zipping: System.ServiceModel.Primitives.dll
+... zipping: System.ServiceModel.Security.dll
+... zipping: System.ServiceModel.Syndication.dll
+... zipping: System.ServiceProcess.ServiceController.dll
+... zipping: System.Text.Encoding.CodePages.dll
+... zipping: System.Text.Encodings.Web.dll
+... zipping: System.Threading.AccessControl.dll
+... zipping: cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+... zipping: cs\Microsoft.CodeAnalysis.resources.dll
+... zipping: de\Microsoft.CodeAnalysis.CSharp.resources.dll
+... zipping: de\Microsoft.CodeAnalysis.resources.dll
+... zipping: es\Microsoft.CodeAnalysis.CSharp.resources.dll
+... zipping: es\Microsoft.CodeAnalysis.resources.dll
+... zipping: fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+... zipping: fr\Microsoft.CodeAnalysis.resources.dll
+... zipping: it\Microsoft.CodeAnalysis.CSharp.resources.dll
+... zipping: it\Microsoft.CodeAnalysis.resources.dll
+... zipping: ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+... zipping: ja\Microsoft.CodeAnalysis.resources.dll
+... zipping: ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+... zipping: ko\Microsoft.CodeAnalysis.resources.dll
+... zipping: pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+... zipping: pl\Microsoft.CodeAnalysis.resources.dll
+... zipping: pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+... zipping: pt-BR\Microsoft.CodeAnalysis.resources.dll
+... zipping: ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+... zipping: ru\Microsoft.CodeAnalysis.resources.dll
+... zipping: tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+... zipping: tr\Microsoft.CodeAnalysis.resources.dll
+... zipping: zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+... zipping: zh-Hans\Microsoft.CodeAnalysis.resources.dll
+... zipping: zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+... zipping: zh-Hant\Microsoft.CodeAnalysis.resources.dll
+Updating code for existing function HelloWorld
+PS C:\Users\AClements\Documents\ServerBuild\HelloWorld>
