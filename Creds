@@ -1,0 +1,4 @@
+$User = "blahblahblah"; 
+$Pass = "halbhalbhalb";
+$PassPlain = ConvertTo-SecureString $Pass -AsPlainText -Force
+$Cred = New-Object System.Management.Automation.PSCredential ($User, $PassPlain)
