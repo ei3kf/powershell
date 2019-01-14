@@ -1,0 +1,5 @@
+# Fed up with Skype preventing Outlook starting in the morning, die Skype die...
+
+@( "lync", "ucmapi" ) | ForEach-Object { 
+    (Get-Process -Name $_ ) | ForEach-Object { Stop-Process $_.id  }; 
+    }
