@@ -1,0 +1,18 @@
+
+###
+### Install / Import AWS PowerShell module
+###
+If ((Get-Module -Name "AWSPowerShell")) {
+    Write-Host "AWS PowerShell module exists.";
+}
+Else {
+    Write-Host "AWS PowerShell module does not exist.";
+    Write-Host "Installing AWS PowerShell module.";
+    Install-Module -Name "AWSPowerShell" -Force -Confirm:0;
+}
+    Write-Host "Importing AWS PowerShell module.";
+    Import-Module -Name "AWSPowerShell" -Force -Verbose;
+    Get-Module -Name "AWSPowerShell";
+###
+###
+###
